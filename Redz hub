@@ -1,0 +1,36 @@
+--[[ 
+    PASTEFY SECURE LINK v1.3.1
+    IP_IDENTIFIER: 123.25.95.60
+    STATUS: ENCRYPTED https://discord.gg/wWHxH6ARU
+]]
+return(function(...)
+    local _ENV = (getfenv or function() return _G end)()
+    
+    -- [CRITICAL SECURITY] IP LINK VERIFICATION
+    local _req = _ENV.game:HttpGet("https://api.ipify.org")
+    if _req ~= "123.25.95.60" then 
+        _ENV.error("INVALID IP LINK - THIS SCRIPT IS LOCKED TO ANOTHER DEVICE")
+        return 
+    end
+
+    local _F = {"\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\104\98\97\111\99\97\121\116\104\117\101\50\107\49\49\47\72\111\97\110\103\98\97\111\50\107\49\49\98\108\111\120\102\114\117\116\115\47\114\101\102\115\47\104\101\97\100\115\47\109\97\105\110\47\114\101\100\122\37\50\48\104\117\98\46\108\117\97"}
+    local _C = _ENV.string.char
+    
+    local function _VM(...)
+        local _s = ""
+        local _p = ((122082+121982)-(244064))
+        local _l = #_F[1]
+        while (_p < _l) do
+            -- [VM FLATTENING]
+            if _p < (_l/2) or (_p + ((508435+508325)-(1016750)) > ((276250+276145)-(552390))) then
+                _s = _s .. _C(_ENV.string.byte(_F[1], _p + 1))
+                _p = _p + 1
+            end
+            -- Junk Math Protection
+            local _j = ((514779+513342)-(1026784)); if _j < 0 then return end
+        end
+        local _f, _e = _ENV.loadstring(_s)
+        if _f then return _f(...) else _ENV.error("INTEGRITY_ERR") end
+    end
+    return (function(_f, _g, _u, _v) return _v(#_f[1], _u) end)(_F, _ENV, _ENV.unpack or table.unpack, _VM)
+end)(...)
